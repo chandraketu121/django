@@ -3,4 +3,10 @@ services :
     web :
       build : .
       ports :
-        - "8000:5000"
+        - "8000:8000"
+      networks:
+      - custom_network
+      cpus: '2'
+
+networks:
+  custom_network:
